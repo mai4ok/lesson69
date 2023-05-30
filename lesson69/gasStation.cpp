@@ -1,22 +1,11 @@
 #include "gasStation.h"
 
-int GasStation::calculateTotalGas(Bus* buses, int busSize,
-	Truck* trucks, int truckSize, Car* cars, int carSize) {
+int GasStation::calculateTotalGas(Transport* transports, int size) {
 	int total = 0;
 
-	for (int i = 0; i < busSize; i++)
+	for (int i = 0; i < size; i++)
 	{
-		total += buses[i].getTank();
-	}
-
-	for (int i = 0; i < truckSize; i++)
-	{
-		total += trucks[i].getTank();
-	}
-
-	for (int i = 0; i < carSize; i++)
-	{
-		total += cars[i].getTank();
+		total += transports[i].getTank();
 	}
 
 	return total;

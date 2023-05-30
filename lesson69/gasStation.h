@@ -1,11 +1,8 @@
 #pragma once
-#include "bus.h"
-#include "car.h"
-#include "truck.h"
+#include "transport.h"
 
 class GasStation
 {
 public:
-	static int calculateTotalGas(Bus* buses, int busSize,
-		Truck* trucks, int truckSize, Car* cars, int carSize);
+	static int calculateTotalGas(Transport* transports, int size);
 };
